@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 
 export const metadata = {
-  metadataBase: new URL("https://dazroshop.com"),
+  metadataBase: new URL("https://dazroshop.vercel.app"),
   title: {
     default: "DazroShop | Online Shopping in Bangladesh",
     template: "%s | DazroShop",
