@@ -1,14 +1,13 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 
-function OrderSuccessPage() {
+function OrderSuccessContent() {
   const searchParams = useSearchParams();
 
-  const orderNumber =
-    searchParams.get("order");
+  const orderNumber = searchParams.get("order");
 
   return (
     <main className="dazro-order-success-page">
@@ -26,35 +25,27 @@ function OrderSuccessPage() {
           </h1>
 
           <p className="dazro-success-text">
-            Thank you for shopping with
-            DazroShop. Your order has been
-            received successfully.
+            Thank you for shopping with DazroShop.
+            Your order has been received successfully.
           </p>
 
           {/* Order Number */}
           {orderNumber && (
             <div className="dazro-success-order-box">
-              <span>
-                Order Number
-              </span>
+              <span>Order Number</span>
 
-              <strong>
-                {orderNumber}
-              </strong>
+              <strong>{orderNumber}</strong>
             </div>
           )}
 
           {/* Info */}
           <div className="dazro-success-info">
             <div>
-              <strong>
-                What happens next?
-              </strong>
+              <strong>What happens next?</strong>
 
               <p>
-                We will review your order
-                and contact you if needed.
-                Your order will then be
+                We will review your order and contact
+                you if needed. Your order will then be
                 processed for delivery.
               </p>
             </div>
@@ -62,7 +53,6 @@ function OrderSuccessPage() {
 
           {/* Actions */}
           <div className="dazro-success-actions">
-
             <Link
               href="/products"
               className="btn dazro-shop-btn"
@@ -76,12 +66,19 @@ function OrderSuccessPage() {
             >
               Back to Home
             </Link>
-
           </div>
 
         </div>
       </div>
     </main>
+  );
+}
+
+function OrderSuccessPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <OrderSuccessContent />
+    </Suspense>
   );
 }
 
