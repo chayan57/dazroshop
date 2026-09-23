@@ -249,12 +249,12 @@ function RegisterPage() {
 
             <button
               type="submit"
-              className="btn dazro-auth-btn w-100"
+              className="btn dazro-auth-btn w-100 bg-success"
               disabled={loading}
             >
               {loading ? (
                 <>
-                  <span className="spinner-border spinner-border-sm me-2" />
+                  <span className="spinner-border spinner-border-sm me-2 " />
                   Creating Account...
                 </>
               ) : (

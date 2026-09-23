@@ -174,7 +174,7 @@ function LoginPage() {
 
             <button
               type="submit"
-              className="btn dazro-auth-btn w-100"
+              className="btn dazro-auth-btn w-100 bg-success"
               disabled={loading}
             >
               {loading ? (

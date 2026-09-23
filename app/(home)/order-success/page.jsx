@@ -52,10 +52,10 @@ function OrderSuccessContent() {
           </div>
 
           {/* Actions */}
-          <div className="dazro-success-actions">
+          <div className="dazro-success-actions ">
             <Link
               href="/products"
-              className="btn dazro-shop-btn"
+              className="btn dazro-shop-btn bg-success"
             >
               Continue Shopping
             </Link>
